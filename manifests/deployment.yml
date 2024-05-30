@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: apraneetharevhire 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apraneetharevhire
+  template:
+    metadata:
+      labels:
+        app: apraneetharevhire 
+    spec:
+      containers:
+        - name: apraneetharevhire 
+          image: praneethareg.azurecr.io/apraneetharevhire
+          ports:
+          - containerPort: 4200
